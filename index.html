@@ -21,98 +21,110 @@
     <div class="conteiner">
         <div class="conteudo">
             <h3>Primeiro, seu prato</h3>
-            <div class="caixa-produtos">
-                <div class="produto">
+            <div class="caixa-produtos pratos">
+                <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/shawarma.jpg" />
                     <h5>Shawarma</h5>
                     <p class="descricao">Pão sírio, frango, salada e molho de alho</p>
                     <p class="valor">R$ 25,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/falafel.png" />
                     <h5>Falafel</h5>
                     <p class="descricao">6 Bolinhos de grão de bico temperados à moda árabe</p>
                     <p class="valor">R$ 23,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/esfirra-aberta.png" />
                     <h5>Esfirra Aberta</h5>
                     <p class="descricao">Recheio sabor carne, tomate e cebola. 4 unidades</p>
                     <p class="valor">R$ 21,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/kibe-cru.jpg" />
                     <h5>Kibe Cru</h5>
                     <p class="descricao">Carne, trigo, cebola e hortelã. Acompanha pão sírio</p>
                     <p class="valor">R$ 20,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
             </div>
         </div>
         <div class="conteudo">
             <h3>Agora, sua bebida</h3>
-            <div class="caixa-produtos">
-                <div class="produto">
+            <div class="caixa-produtos bebidas">
+                <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/guarana.jpg" />
                     <h5>Guaraná Mineiro</h5>
                     <p class="descricao">Lata 350ml</p>
                     <p class="valor">R$ 6,00</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/suco.jpg" />
                     <h5>Suco Natural</h5>
                     <p class="descricao">Garrafa 500ml</p>
                     <p class="valor">R$ 11,00</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/agua-com-gas.jpg" />
                     <h5>Água com gás</h5>
                     <p class="descricao">Garrafa 500ml</p>
                     <p class="valor">R$ 4,00</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/agua-sem-gas.png" />
                     <h5>Água sem gás</h5>
                     <p class="descricao">Garrafa 500ml</p>
                     <p class="valor">R$ 3,50</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
             </div>
         </div>
         <div class="conteudo">
             <h3>Por fim, sua sobremesa</h3>
-            <div class="caixa-produtos">
-                <div class="produto">
+            <div class="caixa-produtos sobremesas">
+                <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/esfirra-doce.jpg" />
                     <h5>Esfirra doce</h5>
                     <p class="descricao">Esfirra de chocolate enfeitada com M&Ms</p>
                     <p class="valor">R$ 6,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/banoffee.png" />
-                    <h5>Banoffe</h5>
+                    <h5>Banoffee</h5>
                     <p class="descricao">Banana, doce de leite e chantilly</p>
                     <p class="valor">R$ 8,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/cheesecake.png" />
                     <h5>Cheesecake</h5>
                     <p class="descricao">Cheesecake de frutas vermelhas</p>
                     <p class="valor">R$ 9,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
-                <div class="produto">
+                <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/brigadeiro.jpg" />
                     <h5>Brigadeiro</h5>
                     <p class="descricao">Sabores variados. 4 unidades</p>
                     <p class="valor">R$ 7,90</p>
+                    <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
             </div>
         </div>
     </div>
     <div class="barra-inferior">
-        <div class="botao">
-            <h4>Selecione os 3 itens</h4>
-            <h4>para fechar o pedido</h4>
+        <div id="botaofinal" class="botao" onclick="finalizarPedido()">
+            <h4>Selecione os 3 itens para fechar o pedido</h4>
         </div>
     </div>
-
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
