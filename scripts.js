@@ -1,9 +1,9 @@
 let prato;
 let bebida;
 let sobremesa;
-let num1 = 0;
-let num2 = 0;
-let num3 = 0;
+let num1;
+let num2;
+let num3;
 
 function selecionarPrato(elemento) {
     const verificadorProduto = document.querySelector(".pratos").querySelector(".borda-verde");
@@ -20,20 +20,13 @@ function selecionarPrato(elemento) {
 
     prato = elemento.querySelector("h5").innerHTML;
 
+    num1 = elemento.querySelector(".valor").innerHTML;
+    num1 = Number(num1.slice(3).replace("," , "."));
+
     if (prato && bebida && sobremesa) {
         const botaoHabilitado = document.querySelector(".desabilitado");
         botaoHabilitado.classList.add("habilitado");
         botaoHabilitado.querySelector("h4").innerHTML = "Fazer pedido";
-    }
-
-    if (prato === "Shawarma") {
-        num1 = 25.90;
-    } else if (prato === "Falafel") {
-        num1 = 23.90;
-    } else if (prato === "Esfirra Aberta") {
-        num1 = 21.90;
-    } else if (prato === "Kibe Cru") {
-        num1 = 20.90;
     }
 }
 
@@ -51,21 +44,14 @@ function selecionarBebida(elemento) {
     elemento.querySelector("ion-icon").classList.add("check");
 
     bebida = elemento.querySelector("h5").innerHTML;
+    
+    num2 = elemento.querySelector(".valor").innerHTML;
+    num2 = Number(num2.slice(3).replace("," , "."));
 
     if (prato && bebida && sobremesa) {
         const botaoHabilitado = document.querySelector(".desabilitado");
         botaoHabilitado.classList.add("habilitado");
         botaoHabilitado.querySelector("h4").innerHTML = "Fazer pedido";
-    }
-
-    if (bebida === "Guaraná Mineiro") {
-        num2 = 6.00;
-    } else if (bebida === "Suco Natural") {
-        num2 = 11.00;
-    } else if (bebida === "Água com gás") {
-        num2 = 4.00;
-    } else if (bebida === "Água sem gás") {
-        num2 = 3.50;
     }
 }
 
@@ -84,20 +70,13 @@ function selecionarSobremesa(elemento) {
 
     sobremesa = elemento.querySelector("h5").innerHTML;
 
+    num3 = elemento.querySelector(".valor").innerHTML;
+    num3 = Number(num3.slice(3).replace("," , "."));
+
     if (prato && bebida && sobremesa) {
         const botaoHabilitado = document.querySelector(".desabilitado");
         botaoHabilitado.classList.add("habilitado");
         botaoHabilitado.querySelector("h4").innerHTML = "Fazer pedido";
-    }
-
-    if (sobremesa === "Esfirra doce") {
-        num3 = 6.90;
-    } else if (sobremesa === "Banoffee") {
-        num3 = 8.90;
-    } else if (sobremesa === "Cheesecake") {
-        num3 = 9.90;
-    } else if (sobremesa === "Brigadeiro") {
-        num3 = 7.90;
     }
 }
 
