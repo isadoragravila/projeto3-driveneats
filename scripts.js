@@ -83,11 +83,16 @@ function selecionarSobremesa(elemento) {
 function finalizarPedido(elemento) {
     let soma = num1 + num2 + num3;
     let somaString = soma.toFixed(2);
+    let nome = prompt("Digite seu nome:");
+    let endereco = prompt("Digite seu endereço:");
     let frase = `Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
-    Total: R$ ${somaString}`;
+    Total: R$ ${somaString}
+    
+    Nome: ${nome}
+    Endereço: ${endereco}`;
     let encoded = encodeURIComponent(frase);
     window.open("https://wa.me/5534988919002?text=" + encoded);
 }
