@@ -74,15 +74,19 @@ function selecionarSobremesa(elemento) {
     num3 = Number(num3.replace("," , "."));
 
     if (prato && bebida && sobremesa) {
-        const botaoHabilitado = document.querySelector(".desabilitado");
+        const botaoHabilitado = document.querySelector(".botao");
         botaoHabilitado.classList.add("habilitado");
         botaoHabilitado.querySelector("h4").innerHTML = "Fazer pedido";
     }
 }
 
 function finalizarPedido() {
+    
+    const verif = document.querySelector(".botao").classList.contains("habilitado");
+    
+    if (verif) {
     const fundo = document.querySelector(".fundo-branco");
-    fundo.classList.remove("escondido");
+    fundo.classList.remove("escondido"); }
 
     let soma = num1 + num2 + num3;
     let somaString = "R$ " + soma.toFixed(2).replace("." , ",");
