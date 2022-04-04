@@ -12,6 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="fundo-branco escondido">
+        <div class="confirmacao">
+            <div class="superior"><h4 class="branco">Confirme seu pedido</h4></div>
+            <div class="lista"><p class="prato"></p><p class="valor-prato"></p></div>
+            <div class="lista"><p class="bebida"></p><p class="valor-bebida"></p></div>
+            <div class="lista"><p class="sobremesa"></p><p class="valor-sobremesa"></p></div>
+            <div class="lista"><h4 class="branco">TOTAL</h4><h4 class="branco valor-total"></h4></div>
+            <div class="inferior">
+                <div class="botao-pedir" onclick="confirmarPedido()">
+                    <h4 class="verde">Tudo certo, pode pedir!</h4>
+                </div>
+                <div class="botao-cancelar" onclick="cancelar()">
+                    <h6>Cancelar</h6>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="barra-superior">
         <div class="logo">
             <h1>DrivenEats</h1>
@@ -26,28 +43,28 @@
                     <img src="images/shawarma.jpg" />
                     <h5>Shawarma</h5>
                     <p class="descricao">Pão sírio, frango, salada e molho de alho</p>
-                    <p class="valor">R$ 25,90</p>
+                    <div><span>R$ </span><span class="valor">25,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/falafel.png" />
                     <h5>Falafel</h5>
                     <p class="descricao">6 Bolinhos de grão de bico temperados à moda árabe</p>
-                    <p class="valor">R$ 23,90</p>
+                    <div><span>R$ </span><span class="valor">23,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/esfirra-aberta.png" />
                     <h5>Esfirra Aberta</h5>
                     <p class="descricao">Recheio sabor carne, tomate e cebola. 4 unidades</p>
-                    <p class="valor">R$ 21,90</p>
+                    <div><span>R$ </span><span class="valor">21,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarPrato(this)">
                     <img src="images/kibe-cru.jpg" />
                     <h5>Kibe Cru</h5>
                     <p class="descricao">Carne, trigo, cebola e hortelã. Acompanha pão sírio</p>
-                    <p class="valor">R$ 20,90</p>
+                    <div><span>R$ </span><span class="valor">20,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
             </div>
@@ -59,28 +76,28 @@
                     <img src="images/guarana.jpg" />
                     <h5>Guaraná Mineiro</h5>
                     <p class="descricao">Lata 350ml</p>
-                    <p class="valor">R$ 6,00</p>
+                    <div><span>R$ </span><span class="valor">6,00</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/suco.jpg" />
                     <h5>Suco Natural</h5>
                     <p class="descricao">Garrafa 500ml</p>
-                    <p class="valor">R$ 11,00</p>
+                    <div><span>R$ </span><span class="valor">11,00</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/agua-com-gas.jpg" />
                     <h5>Água com gás</h5>
                     <p class="descricao">Garrafa 500ml</p>
-                    <p class="valor">R$ 4,00</p>
+                    <div><span>R$ </span><span class="valor">4,00</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarBebida(this)">
                     <img src="images/agua-sem-gas.png" />
                     <h5>Água sem gás</h5>
                     <p class="descricao">Garrafa 500ml</p>
-                    <p class="valor">R$ 3,50</p>
+                    <div><span>R$ </span><span class="valor">3,50</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
             </div>
@@ -92,35 +109,35 @@
                     <img src="images/esfirra-doce.jpg" />
                     <h5>Esfirra doce</h5>
                     <p class="descricao">Esfirra de chocolate enfeitada com M&Ms</p>
-                    <p class="valor">R$ 6,90</p>
+                    <div><span>R$ </span><span class="valor">6,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/banoffee.png" />
                     <h5>Banoffee</h5>
                     <p class="descricao">Banana, doce de leite e chantilly</p>
-                    <p class="valor">R$ 8,90</p>
+                    <div><span>R$ </span><span class="valor">8,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/cheesecake.png" />
                     <h5>Cheesecake</h5>
                     <p class="descricao">Cheesecake de frutas vermelhas</p>
-                    <p class="valor">R$ 9,90</p>
+                    <div><span>R$ </span><span class="valor">9,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
                 <div class="produto borda-branca" onclick="selecionarSobremesa(this)">
                     <img src="images/brigadeiro.jpg" />
                     <h5>Brigadeiro</h5>
                     <p class="descricao">Sabores variados. 4 unidades</p>
-                    <p class="valor">R$ 7,90</p>
+                    <div><span>R$ </span><span class="valor">7,90</span></div>
                     <ion-icon name="checkmark-circle" class="escondido"></ion-icon>
                 </div>
             </div>
         </div>
     </div>
     <div class="barra-inferior">
-        <div class="botao desabilitado" onclick="finalizarPedido(this)">
+        <div class="botao desabilitado" onclick="finalizarPedido()">
             <h4>Selecione os 3 itens para fechar o pedido</h4>
         </div>
     </div>

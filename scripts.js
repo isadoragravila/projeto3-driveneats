@@ -21,7 +21,7 @@ function selecionarPrato(elemento) {
     prato = elemento.querySelector("h5").innerHTML;
 
     num1 = elemento.querySelector(".valor").innerHTML;
-    num1 = Number(num1.slice(3).replace("," , "."));
+    num1 = Number(num1.replace("," , "."));
 
     if (prato && bebida && sobremesa) {
         const botaoHabilitado = document.querySelector(".desabilitado");
@@ -46,7 +46,7 @@ function selecionarBebida(elemento) {
     bebida = elemento.querySelector("h5").innerHTML;
     
     num2 = elemento.querySelector(".valor").innerHTML;
-    num2 = Number(num2.slice(3).replace("," , "."));
+    num2 = Number(num2.replace("," , "."));
 
     if (prato && bebida && sobremesa) {
         const botaoHabilitado = document.querySelector(".desabilitado");
@@ -71,7 +71,7 @@ function selecionarSobremesa(elemento) {
     sobremesa = elemento.querySelector("h5").innerHTML;
 
     num3 = elemento.querySelector(".valor").innerHTML;
-    num3 = Number(num3.slice(3).replace("," , "."));
+    num3 = Number(num3.replace("," , "."));
 
     if (prato && bebida && sobremesa) {
         const botaoHabilitado = document.querySelector(".desabilitado");
@@ -80,11 +80,32 @@ function selecionarSobremesa(elemento) {
     }
 }
 
-function finalizarPedido(elemento) {
+function finalizarPedido() {
+    const fundo = document.querySelector(".fundo-branco");
+    fundo.classList.remove("escondido");
+
+    let soma = num1 + num2 + num3;
+    let somaString = "R$ " + soma.toFixed(2).replace("." , ",");
+    let num1String = num1.toFixed(2).replace("." , ",");
+    let num2String = num2.toFixed(2).replace("." , ",");
+    let num3String = num3.toFixed(2).replace("." , ",");
+
+    document.querySelector(".prato").innerHTML = prato;
+    document.querySelector(".bebida").innerHTML = bebida;
+    document.querySelector(".sobremesa").innerHTML = sobremesa;
+    document.querySelector(".valor-prato").innerHTML = num1String;
+    document.querySelector(".valor-bebida").innerHTML = num2String;
+    document.querySelector(".valor-sobremesa").innerHTML = num3String;
+    document.querySelector(".valor-total").innerHTML = somaString;
+}
+
+function confirmarPedido() {
     let soma = num1 + num2 + num3;
     let somaString = soma.toFixed(2);
+
     let nome = prompt("Digite seu nome:");
     let endereco = prompt("Digite seu endereço:");
+
     let frase = `Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
@@ -95,4 +116,9 @@ function finalizarPedido(elemento) {
     Endereço: ${endereco}`;
     let encoded = encodeURIComponent(frase);
     window.open("https://wa.me/5534988919002?text=" + encoded);
+}
+
+function cancelar() {
+    const fundo = document.querySelector(".fundo-branco");
+    fundo.classList.add("escondido");
 }

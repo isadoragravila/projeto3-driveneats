@@ -7,6 +7,104 @@ body {
     box-sizing: border-box;
 }
 
+.fundo-branco {
+    width: 100%;
+    max-width: 414px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.confirmacao {
+    width: 100%;
+    max-width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirmacao .superior {
+    margin-top: 21px;
+    margin-bottom: 10px;
+}
+
+.confirmacao h4 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.confirmacao p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.confirmacao h6 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.verde {
+    color: #50D074;
+}
+
+.branco {
+    color: #ffffff;
+}
+
+.confirmacao .lista {
+    width: 100%;
+    max-width: 377px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmacao .inferior {
+    width: 100%;
+    max-width: 329px;
+}
+
+.confirmacao .botao-pedir {
+    width: 100%;
+    max-width: 329px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.confirmacao .botao-cancelar {
+    width: 100%;
+    max-width: 329px;
+    height: 52px;
+    background-color: #50D074;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .barra-superior {
     background-color: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -105,7 +203,6 @@ body {
 }
 
 .produto .descricao {
-    font-style: normal;
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
@@ -113,7 +210,7 @@ body {
     margin-bottom: 8px;
 }
 
-.produto .valor {
+.produto span {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
